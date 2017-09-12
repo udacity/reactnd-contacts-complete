@@ -14,7 +14,7 @@ class App extends Component {
     })
   }
   removeContact = (contact) => {
-    ContactsAPI.create(contact).then(contact => {
+    ContactsAPI.remove(contact).then(contact => {
       this.setState(state => ({
         contacts: state.contacts.concat([contact])
       }))
