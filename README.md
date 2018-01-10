@@ -6,8 +6,10 @@ Most of the commits in this repository correspond to videos in the program.
 
 ## Project Setup
 
-* clone the Project - `git clone https://github.com/udacity/reactnd-contacts-complete.git`
+* clone the project - `git clone https://github.com/udacity/reactnd-contacts-complete.git`
+* go into the directory where the project now lives - `cd reactnd-contacts-complete`
 * install the dependencies - `npm install`
+* start the app - `npm start`
 
 ## Contributing
 
