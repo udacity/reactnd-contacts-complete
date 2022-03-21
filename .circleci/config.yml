@@ -1,0 +1,38 @@
+# Use the latest 2.1 version of CircleCI pipeline process engine.
+version: 2.1
+orbs:
+  node: circleci/node@5.0.1
+  aws-cli: circleci/aws-cli@2.1.0
+  s3-cli: circleci/aws-s3@3.0.0
+  ebs-cli: circleci/aws-elastic-beanstalk@2.0.1
+# Define a job to be invoked later in a workflow.
+jobs:
+  say-done:
+    # Specify the execution environment.
+    docker:
+      - image: cimg/base:stable
+    # Add steps to the job
+    steps:
+      - node/install
+      - checkout
+      - run:
+          name: NPM Install
+          command: |
+            npm install
+      - run:
+          name: Build
+          command: |
+            npm run build
+      - run:
+          name: Deploy
+          command: |
+            npm run deploy
+      - run:
+          name: "Done"
+          command: echo "Job Done"
+
+# Invoke jobs via workflows
+workflows:
+  project-workflow:
+    jobs:
+      - say-done
