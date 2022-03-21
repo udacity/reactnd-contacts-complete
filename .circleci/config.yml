@@ -30,7 +30,7 @@ jobs:
       #     name: Deploy
       #     command: |
       #       npm run deploy
-      # - run:
+      - runner:
           name: Del:S3
           command: |
             npm run del:s3
