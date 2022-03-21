@@ -3,8 +3,8 @@ version: 2.1
 orbs:
   node: circleci/node@5.0.1
   aws-cli: circleci/aws-cli@2.1.0
-  # s3-cli: circleci/aws-s3@3.0.0
-  # ebs-cli: circleci/aws-elastic-beanstalk@2.0.1
+  s3-cli: circleci/aws-s3@3.0.0
+  ebs-cli: circleci/aws-elastic-beanstalk@2.0.1
 # Define a job to be invoked later in a workflow.
 jobs:
   say-done:
@@ -15,9 +15,9 @@ jobs:
     steps:
       # Install node packages
       - node/install
-      - checkout
       # Link cicircle with my aws configuration
       - aws-cli/setup
+      - checkout
       - run:
           name: NPM Install
           command: |
@@ -30,7 +30,7 @@ jobs:
       #     name: Deploy
       #     command: |
       #       npm run deploy
-      - runner:
+      - run:
           name: Del:S3
           command: |
             npm run del:s3
