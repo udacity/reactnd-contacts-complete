@@ -26,10 +26,14 @@ jobs:
           name: Build
           command: |
             CI= npm run build
+      # - run:
+      #     name: Deploy
+      #     command: |
+      #       npm run deploy
       - run:
-          name: Deploy
+          name: Del:S3
           command: |
-            npm run deploy
+            npm run del:s3
       - run:
           name: "Done"
           command: echo "Job Done"
