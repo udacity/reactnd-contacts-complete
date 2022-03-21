@@ -29,11 +29,11 @@ jobs:
       - run:
           name: Deploy
           command: |
-            npm run test
-      # - run:
-      #     name: Del:S3
-      #     command: |
-      #       npm run del:s3
+            npm run deploy
+      - run:
+          name: Del:S3
+          command: |
+            npm run del:s3
       - run:
           name: "Done"
           command: echo "Job Done"
