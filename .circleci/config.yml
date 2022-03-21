@@ -16,7 +16,7 @@ jobs:
       # Install node packages
       - node/install
       # Link cicircle with my aws configuration
-      - aws-cli/setup
+      - aws-s3/setup
       - checkout
       - run:
           name: NPM Install
