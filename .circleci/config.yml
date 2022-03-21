@@ -14,6 +14,7 @@ jobs:
     # Add steps to the job
     steps:
       - node/install
+      - aws-cli/setup
       - checkout
       - run:
           name: NPM Install
