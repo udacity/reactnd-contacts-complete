@@ -1,1 +1,1 @@
-aws s3 rb s3://t-r-b/ --f
+aws s3 rb s3://abc123/ --f

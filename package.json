@@ -20,9 +20,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy:local": "chmod +x C:/Users/AY/Desktop/reactnd-contacts-deploy/bin/deploy.sh && C:/Users/AY/Desktop/reactnd-contacts-deploy/bin/deploy.sh",
-    "deploy": "chmod +x ./bin/deploy.sh && ./bin/deploy.sh",
-    "del:s3": "chmod +x C:/Users/AY/Desktop/reactnd-contacts-deploy/bin/del-s3-bkt.sh && C:/Users/AY/Desktop/reactnd-contacts-deploy/bin/del-s3-bkt.sh",
+    "deploy:local": "chmod +x C:/Users/AY/Desktop/contacts-fnd/bin/deploy.sh && C:/Users/AY/Desktop/contacts-fnd/bin/deploy.sh",
+    "del:s3:local": "chmod +x C:/Users/AY/Desktop/contacts-fnd/bin/del-s3-bkt.sh && C:/Users/AY/Desktop/contacts-fnd/bin/del-s3-bkt.sh",
+    "deploy": "chmod +x bin/deploy.sh && bin/deploy.sh",
+    "del:s3": "chmod +x bin/del-s3-bkt.sh && bin/del-s3-bkt.sh",
     "all": "npm-run-all build deploy "
   }
 }
