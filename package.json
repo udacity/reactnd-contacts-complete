@@ -5,6 +5,7 @@
   "dependencies": {
     "escape-string-regexp": "^1.0.5",
     "form-serialize": "^0.7.2",
+    "npm-run-all": "^4.1.5",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
@@ -18,6 +19,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy:local": "chmod +x C:/Users/AY/Desktop/contacts-fnd/bin/deploy.sh && C:/Users/AY/Desktop/contacts-fnd/bin/deploy.sh",
+    "del:s3:local": "chmod +x C:/Users/AY/Desktop/contacts-fnd/bin/del-s3-bkt.sh && C:/Users/AY/Desktop/contacts-fnd/bin/del-s3-bkt.sh",
+    "deploy": "chmod +x bin/deploy.sh && bin/deploy.sh",
+    "del:s3": "chmod +x bin/del-s3-bkt.sh && bin/del-s3-bkt.sh",
+    "all": "npm-run-all build deploy "
   }
 }
