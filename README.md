@@ -21,6 +21,12 @@ npm install
 
 - Start the app - `npm start`
 
+
+- Generate deployable artifacts
+```bash
+npm build
+```
+
 ## Contributing
 
 Because this is a code-along project and the commits correspond to specific videos in the program, we will not be accepting pull requests.
